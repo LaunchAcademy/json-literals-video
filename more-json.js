@@ -10,11 +10,6 @@
 
 */
 
-// let firstPerson = ['Jon', 'Snow']
-// let firstPerson = new Object()
-// firstPerson.firstName = 'Jon'
-// firstPerson.lastName = 'Snow'
-
 let summarize = (person) => {
   console.log(`${person.firstName} ${person.lastName} is ${person.age} years old`)
 }
@@ -25,18 +20,24 @@ let firstPerson = {
   age: 22
 }
 
-let secondPerson = {
-  firstName: 'Arya',
-  lastName: 'Stark',
-  age: 15
+// summarize(firstPerson)
+
+let maxima = {
+  make: 'Nissan',
+  model: 'Maxima',
+  year: 2012,
+  price: 4999,
+  saleSummary() {
+    return `\$${this.price} - ${this.year} ${this.make} ${this.model}`
+  }
 }
 
-summarize(firstPerson)
-firstPerson.age = 25
-firstPerson["age"] = 30
-firstPerson["firstName"] = "John"
-summarize(firstPerson)
-
-
-
-// summarize(secondPerson)
+let jetta = {
+  make: 'Volkswagen',
+  model: 'Jetta',
+  year: 2014,
+  price: 6450,
+  saleSummary() {
+    return `\$${this.price} - ${this.year} ${this.make} ${this.model}`
+  }
+}
