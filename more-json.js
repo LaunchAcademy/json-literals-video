@@ -41,3 +41,10 @@ let jetta = {
     return `\$${this.price} - ${this.year} ${this.make} ${this.model}`
   }
 }
+
+for(let propName in jetta){
+  debugger
+  if(typeof jetta[propName] !== 'function') {
+    console.log(propName + ":" + jetta[propName])
+  }
+}
